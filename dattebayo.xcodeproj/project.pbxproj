@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4D7FA30E2D7BB6B200A72DB7 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7FA30D2D7BB6B200A72DB7 /* LuckiestGuy-Regular.ttf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4D7FA2BF2D7B7F3A00A72DB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +31,25 @@
 		4D7FA2AE2D7B7F3700A72DB7 /* dattebayo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dattebayo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7FA2BE2D7B7F3A00A72DB7 /* dattebayoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dattebayoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7FA2C82D7B7F3A00A72DB7 /* dattebayoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dattebayoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7FA30D2D7BB6B200A72DB7 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4D7FA3102D7BB6D300A72DB7 /* Exceptions for "dattebayo" folder in "dattebayo" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4D7FA2AD2D7B7F3700A72DB7 /* dattebayo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4D7FA2B02D7B7F3700A72DB7 /* dattebayo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4D7FA3102D7BB6D300A72DB7 /* Exceptions for "dattebayo" folder in "dattebayo" target */,
+			);
 			path = dattebayo;
 			sourceTree = "<group>";
 		};
@@ -79,6 +97,7 @@
 				4D7FA2C12D7B7F3A00A72DB7 /* dattebayoTests */,
 				4D7FA2CB2D7B7F3A00A72DB7 /* dattebayoUITests */,
 				4D7FA2AF2D7B7F3700A72DB7 /* Products */,
+				4D7FA30D2D7BB6B200A72DB7 /* LuckiestGuy-Regular.ttf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +189,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
@@ -212,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7FA30E2D7BB6B200A72DB7 /* LuckiestGuy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,12 +416,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"dattebayo/Preview Content\"";
 				DEVELOPMENT_TEAM = 853K3F2A4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dattebayo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,12 +447,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"dattebayo/Preview Content\"";
 				DEVELOPMENT_TEAM = 853K3F2A4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dattebayo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

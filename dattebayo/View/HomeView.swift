@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var viewModel = NavigationCardViewModel() // Using ViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .center, spacing: 30.0) {
+                    ForEach(viewModel.cards) { card in
+                        NavigationLink(destination: DetailView(card: card)) {
+                            NavigationCardView(card: card)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Text("Dattebayo")
+                            .font(.title) // You can adjust the font size here
+                        Image("naruto") // Make sure the image name matches the asset
+                            .resizable() // Allows resizing of the image
+                            .scaledToFit() // Maintains aspect ratio
+                            .frame(width: 24, height: 24) // Adjust size to match the text
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CharacterDetailView: View {
+struct DetailView: View {
     let card: NavigationCardModel
     
     var body: some View {
@@ -11,7 +11,7 @@ struct CharacterDetailView: View {
                     Image(card.imageName)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geometry.size.width, height: 350)
+                        .frame(width: max(geometry.size.width, 1), height: max(350, 1)) // Ensure valid positive values
                         .blur(radius: 20)
                         .clipped() // Clip the image to prevent overflow
 
@@ -25,12 +25,12 @@ struct CharacterDetailView: View {
                         Image(card.imageName)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: geometry.size.width - 150, height: geometry.size.height / 4) // Adjust size for image
+                            .frame(width: max(geometry.size.width - 150, 1), height: max(geometry.size.height / 4, 1)) // Ensure valid positive values
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .shadow(radius: 10)
                         
                         Text(card.title)
-                            .font(.largeTitle)
+                            .font(.custom("LuckiestGuy-Regular", size: 36))
                             .fontWeight(.black)
                             .foregroundColor(.white)
                             .bold()
@@ -54,5 +54,5 @@ struct CharacterDetailView: View {
 }
 
 #Preview {
-    CharacterDetailView(card: NavigationCardModel(imageName: "characters", title: "Characters"))
+    DetailView(card: NavigationCardModel(imageName: "characters", title: "Characters"))
 }
